@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Rocket } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SITE_CONFIG } from "../config/site";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
@@ -35,7 +36,7 @@ const Navbar: React.FC = () => {
       <div className="container nav-container">
         <Link to="/" className="logo">
           <Rocket className="logo-icon" size={28} />
-          <span>EduAcademy</span>
+          <span>{SITE_CONFIG.name}</span>
         </Link>
 
         {/* Desktop Nav */}

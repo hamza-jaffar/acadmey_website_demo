@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import Card from "../components/Card";
 import { motion } from "framer-motion";
 import { BookOpen, Users, Award, ChevronRight } from "lucide-react";
+import { SITE_CONFIG } from "../config/site";
 import "./Home.css";
 
 const Home: React.FC = () => {
@@ -11,27 +12,36 @@ const Home: React.FC = () => {
     {
       title: "Advanced Web Development",
       description:
-        "Master modern frontend frameworks and backend technologies with real-world projects.",
+        "Master modern frontend frameworks like React and Vue, plus Node.js backend integration.",
       tag: "Development",
       price: "$199",
+      duration: "12 Weeks",
+      level: "Advanced",
+      students: "1.2k",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
     },
     {
       title: "UX/UI Design Mastery",
       description:
-        "Learn to create stunning user interfaces and seamless experiences from industry experts.",
+        "Learn professional design workflows, from wireframing to high-fidelity prototyping in Figma.",
       tag: "Design",
       price: "$149",
+      duration: "8 Weeks",
+      level: "Intermediate",
+      students: "850",
       image:
         "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=600",
     },
     {
       title: "Data Science Bootcamp",
       description:
-        "Dive deep into data analysis, machine learning, and statistical modeling with Python.",
+        "Comprehensive training in Python, SQL, and machine learning for data-driven decision making.",
       tag: "Data",
       price: "$249",
+      duration: "16 Weeks",
+      level: "Intermediate",
+      students: "2.1k",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
     },
@@ -44,39 +54,38 @@ const Home: React.FC = () => {
         <div className="container hero-container">
           <motion.div
             className="hero-content"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="hero-subtitle">Academy Portfolio</span>
+            <span className="hero-subtitle">{SITE_CONFIG.title}</span>
             <h1 className="hero-title">
               Crafting Excellence Through{" "}
               <span className="text-accent">Innovative Learning</span>
             </h1>
             <p className="hero-desc">
-              We don't just teach. We empower creators to build the future.
-              Explore our student impact, award-winning projects, and
-              industry-leading professional tracks.
+              {SITE_CONFIG.description}. We empower creators to build the future
+              with industry-leading professional tracks.
             </p>
             <div className="hero-btns">
               <Button
                 size="lg"
-                onClick={() => (window.location.href = "/showcase")}
+                onClick={() => (window.location.href = "/courses")}
               >
-                View Showcase
+                Explore Programs
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => (window.location.href = "/courses")}
+                onClick={() => (window.location.href = "/showcase")}
               >
-                Our Programs
+                Student Work
               </Button>
             </div>
           </motion.div>
           <motion.div
             className="hero-image-wrapper"
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
@@ -140,7 +149,7 @@ const Home: React.FC = () => {
       {/* Featured Courses */}
       <Section>
         <div className="section-header text-center">
-          <span className="subtitle">Popular Programs</span>
+          <span className="subtitle">Premium Programs</span>
           <h2 className="section-title">Explore Our Top Courses</h2>
         </div>
         <div className="courses-grid responsive-grid">
@@ -149,8 +158,12 @@ const Home: React.FC = () => {
           ))}
         </div>
         <div className="text-center mt-4">
-          <Button variant="ghost" className="view-link">
-            View All Courses <ChevronRight size={20} />
+          <Button
+            variant="ghost"
+            className="view-link"
+            onClick={() => (window.location.href = "/courses")}
+          >
+            View All Programs <ChevronRight size={20} />
           </Button>
         </div>
       </Section>
@@ -160,10 +173,14 @@ const Home: React.FC = () => {
         <div className="cta-card">
           <h2>Ready to start your journey?</h2>
           <p>
-            Admission for the Summer 2026 intake is now open. Limited seats
-            available!
+            Admission for the next intake is now open for {SITE_CONFIG.name}.
+            Limited seats available!
           </p>
-          <Button variant="secondary" size="lg">
+          <Button
+            variant="secondary"
+            size="lg"
+            onClick={() => (window.location.href = "/about")}
+          >
             Apply Now
           </Button>
         </div>

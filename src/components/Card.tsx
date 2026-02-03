@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import "./Card.css";
 
 interface CardProps {
@@ -9,6 +8,9 @@ interface CardProps {
   image?: string;
   tag?: string;
   price?: string;
+  duration?: string;
+  level?: string;
+  students?: string;
   onClick?: () => void;
   className?: string;
 }
@@ -19,13 +21,16 @@ const Card: React.FC<CardProps> = ({
   image,
   tag,
   price,
+  duration,
+  level,
+  students,
   onClick,
   className = "",
 }) => {
   return (
     <motion.div
       className={`card ${className}`}
-      whileHover={{ y: -10 }}
+      whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
       onClick={onClick}
     >
@@ -37,12 +42,19 @@ const Card: React.FC<CardProps> = ({
       )}
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
+        <div className="card-meta">
+          {duration && <span>{duration}</span>}
+          {level && <span> • {level}</span>}
+        </div>
         <p className="card-description">{description}</p>
         <div className="card-footer">
-          {price && <span className="card-price">{price}</span>}
-          <button className="card-btn">
-            Learn More <ArrowRight size={16} />
-          </button>
+          <div className="card-price-box">
+            {price && <span className="card-price">{price}</span>}
+            {students && (
+              <span className="card-students">{students} students</span>
+            )}
+          </div>
+          <button className="card-btn">View details</button>
         </div>
       </div>
     </motion.div>

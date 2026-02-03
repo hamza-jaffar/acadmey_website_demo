@@ -8,6 +8,7 @@ import {
   HelpCircle,
   Rocket,
 } from "lucide-react";
+import { SITE_CONFIG } from "../config/site";
 import "./AboutAdmission.css";
 
 const AboutAdmission: React.FC = () => {
@@ -49,15 +50,15 @@ const AboutAdmission: React.FC = () => {
               <span className="text-accent">Leaders</span>
             </h1>
             <p className="about-text">
-              Founded in 2015, EduAcademy has been at the forefront of quality
-              education. Our mission is to bridge the gap between traditional
-              learning and industry requirements.
+              {SITE_CONFIG.name} has been at the forefront of quality education.
+              Our mission is to bridge the gap between traditional learning and
+              industry requirements through{" "}
+              {SITE_CONFIG.description.toLowerCase()}.
             </p>
             <p className="about-text">
               We believe that education should be accessible, practical, and
               inspiring. That's why we bring together the best educators and the
-              latest technologies to create a learning environment like no
-              other.
+              latest technologies at {SITE_CONFIG.name}.
             </p>
             <div className="about-features">
               <div className="feature-small">

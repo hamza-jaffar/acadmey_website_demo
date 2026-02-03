@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../components/Section";
 import Button from "../components/Button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { SITE_CONFIG } from "../config/site";
 import "./Contact.css";
 
 const Contact: React.FC = () => {
@@ -16,7 +17,8 @@ const Contact: React.FC = () => {
         <div className="text-center">
           <h1 className="page-title">Get In Touch</h1>
           <p className="page-subtitle">
-            Have questions? We're here to help you on your educational journey.
+            Have questions? We're here to help you on your educational journey
+            at {SITE_CONFIG.name}.
           </p>
         </div>
       </Section>
@@ -37,7 +39,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4>Call Us</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>{SITE_CONFIG.contact.phone}</p>
                 </div>
               </div>
               <div className="info-item">
@@ -46,7 +48,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4>Email Us</h4>
-                  <p>info@eduacademy.com</p>
+                  <p>{SITE_CONFIG.contact.email}</p>
                 </div>
               </div>
               <div className="info-item">
@@ -55,7 +57,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4>Visit Us</h4>
-                  <p>123 Academy Blvd, Knowledge City, State 12345</p>
+                  <p>{SITE_CONFIG.contact.address}</p>
                 </div>
               </div>
             </div>
