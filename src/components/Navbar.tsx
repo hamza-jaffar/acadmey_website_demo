@@ -24,9 +24,9 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { title: "Home", path: "/" },
-    { title: "Courses", path: "/courses" },
-    { title: "My Courses", path: "/my-courses" },
-    { title: "About", path: "/about" },
+    { title: "Programs", path: "/courses" },
+    { title: "Showcase", path: "/showcase" },
+    { title: "Admission", path: "/about" },
     { title: "Contact", path: "/contact" },
   ];
 

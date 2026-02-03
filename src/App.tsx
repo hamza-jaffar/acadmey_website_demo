@@ -6,6 +6,7 @@ import Courses from "./pages/Courses";
 import AboutAdmission from "./pages/AboutAdmission";
 import Contact from "./pages/Contact";
 import MyCourses from "./pages/MyCourses";
+import Showcase from "./pages/Showcase";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/showcase" element={<Showcase />} />
             <Route path="/about" element={<AboutAdmission />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/my-courses" element={<MyCourses />} />

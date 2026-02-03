@@ -48,29 +48,29 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="hero-subtitle">Excellence in Education</span>
+            <span className="hero-subtitle">Academy Portfolio</span>
             <h1 className="hero-title">
-              Unlock Your Potential with{" "}
-              <span className="text-accent">Premium Learning</span>
+              Crafting Excellence Through{" "}
+              <span className="text-accent">Innovative Learning</span>
             </h1>
             <p className="hero-desc">
-              Join thousands of students learning from industry leaders. We
-              provide the tools, mentorship, and community you need to excel in
-              your career.
+              We don't just teach. We empower creators to build the future.
+              Explore our student impact, award-winning projects, and
+              industry-leading professional tracks.
             </p>
             <div className="hero-btns">
               <Button
                 size="lg"
-                onClick={() => (window.location.href = "/courses")}
+                onClick={() => (window.location.href = "/showcase")}
               >
-                Explore Courses
+                View Showcase
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => (window.location.href = "/about")}
+                onClick={() => (window.location.href = "/courses")}
               >
-                Learn More
+                Our Programs
               </Button>
             </div>
           </motion.div>
@@ -81,23 +81,16 @@ const Home: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-              alt="Academy Learning"
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
+              alt="Academy Collaboration"
               className="hero-image"
             />
             <div className="hero-stats">
               <div className="stat-card">
                 <Users className="stat-icon" />
                 <div>
-                  <h4>10k+</h4>
-                  <p>Students</p>
-                </div>
-              </div>
-              <div className="stat-card">
-                <Award className="stat-icon" />
-                <div>
-                  <h4>50+</h4>
-                  <p>Courses</p>
+                  <h4>100%</h4>
+                  <p>Success Rate</p>
                 </div>
               </div>
             </div>
@@ -105,37 +98,40 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Portfolio Highlight Section */}
       <Section dark>
-        <div className="features-grid">
+        <div className="section-header text-center">
+          <span className="subtitle">Driven by Results</span>
+          <h2 className="section-title">Where Vision Meets Mastery</h2>
+        </div>
+        <div className="features-grid responsive-grid">
           <div className="feature-item">
             <div className="feature-icon-box">
               <BookOpen />
             </div>
-            <h3>Expert Mentors</h3>
+            <h3>Curated Tracks</h3>
             <p>
-              Learn from professionals with years of experience in their
-              respective fields.
+              Rigorous, project-based curriculum designed for professional
+              excellence.
             </p>
           </div>
           <div className="feature-item">
             <div className="feature-icon-box">
               <Users />
             </div>
-            <h3>Community Led</h3>
+            <h3>Elite Network</h3>
             <p>
-              Join a global network of peers and collaborate on meaningful
-              projects.
+              Access an exclusive community of industry leaders and mentors.
             </p>
           </div>
           <div className="feature-item">
             <div className="feature-icon-box">
               <Award />
             </div>
-            <h3>Certified Skills</h3>
+            <h3>Tangible Impact</h3>
             <p>
-              Get recognized certifications that help you stand out in the job
-              market.
+              Build a portfolio of real-world projects that get noticed by
+              global brands.
             </p>
           </div>
         </div>
