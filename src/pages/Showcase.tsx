@@ -39,7 +39,7 @@ const Showcase: React.FC = () => {
       description:
         "Custom NLP model optimized for customer support automation in e-commerce.",
       image:
-        "https://images.unsplash.com/photo-1531746790731-6ca20772d187?auto=format&fit=crop&q=80&w=800",
+        "https://plus.unsplash.com/premium_photo-1682124651258-410b25fa9dc0?q=80&w=1621&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 

@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: "EduAcademy",
+  name: "Bajwa Academy",
   title: "Premium Academy Portfolio",
   description: "Crafting Excellence Through Innovative Learning",
   contact: {
